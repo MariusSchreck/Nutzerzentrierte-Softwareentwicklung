@@ -1,0 +1,14 @@
+Umsatzanzeige,Datei erstellt am: 29.10.2018 15:02,,,,,,,
+,Letztes Update: aktuell,,,,,,,
+,,,,,,,,
+IBAN,DE89 3704 0044 0532 0130 87,,,,,,,
+Kontoname,Girokonto,,,,,,,
+Bank,ING-DiBa,,,,,,,
+Kunde,Ingo Staut,,,,,,,
+Zeitraum,29.09.2018 - 29.10.2018,,,,,,,
+Saldo,100000,0,EUR,,,,,
+,,,,,,,,
+In der CSV-Datei finden Sie alle bereits gebuchten Umsätze. Die vorgemerkten Umsätze werden nicht aufgenommen, auch wenn sie in Ihrem Internetbanking angezeigt werden.,,,,,,,
+,,,,,,,,
+Buchung,Valuta,Auftraggeber/Empfänger,Buchungstext,Verwendungszweck,Saldo,Waehrung,Betrag,Waehrung
+2019-01-13,2019-01-13,REWE,Lastschrift,REWE,610,EUR,-20,EUR

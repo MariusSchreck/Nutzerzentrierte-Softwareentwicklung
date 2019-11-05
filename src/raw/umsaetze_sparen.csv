@@ -1,0 +1,19 @@
+Umsatzanzeige,Datei erstellt am: 29.10.2018 15:02,,,,,,,
+,Letztes Update: aktuell,,,,,,,
+,,,,,,,,
+IBAN,DE78 0310 2350 4440 4037 98,,,,,,,
+Kontoname,Girokonto,,,,,,,
+Bank,SpardaBank,,,,,,,
+Kunde,Ingo Staut,,,,,,,
+Zeitraum,29.09.2018 - 29.10.2018,,,,,,,
+Saldo,100000,0,EUR,,,,,
+,,,,,,,,
+In der CSV-Datei finden Sie alle bereits gebuchten Umsätze. Die vorgemerkten Umsätze werden nicht aufgenommen, auch wenn sie in Ihrem Internetbanking angezeigt werden.,,,,,,,
+,,,,,,,,
+Buchung,Valuta,Auftraggeber/Empfänger,Buchungstext,Verwendungszweck,Saldo,Waehrung,Betrag,Waehrung
+06.01.2018,2018-01-06,Ich,Dauerauftrag,Sparen,1000,EUR,+25,EUR
+06.02.2018,2018-02-06,Ich,Dauerauftrag,Sparen,1025,EUR,+25,EUR
+06.03.2018,2018-03-06,Ich,Dauerauftrag,Sparen,1050,EUR,+25,EUR
+06.04.2018,2018-04-06,Ich,Dauerauftrag,Sparen,1075,EUR,+25,EUR
+06.05.2018,2018-05-06,Ich,Dauerauftrag,Sparen,1100,EUR,+25,EUR
+06.06.2018,2018-06-06,Ich,Dauerauftrag,Sparen,1125,EUR,+25,EUR

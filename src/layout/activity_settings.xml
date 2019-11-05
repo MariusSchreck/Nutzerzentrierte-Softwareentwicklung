@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingTop="50dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="25dp"
+    tools:context=".Settings">
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etSaving"
+        android:layout_width="273dp"
+        android:layout_height="72dp"
+        android:ems="10"
+        android:hint="@string/geld_puffer"
+        android:inputType="text|textPersonName" />
+
+
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speichern"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+Umsatzanzeige,Datei erstellt am: 29.10.2018 15:02,,,,,,,
+,Letztes Update: aktuell,,,,,,,
+,,,,,,,,
+IBAN,DE89 3704 0044 0532 0130 87,,,,,,,
+Kontoname,Girokonto,,,,,,,
+Bank,ING-DiBa,,,,,,,
+Kunde,Ingo Staut,,,,,,,
+Zeitraum,29.09.2018 - 29.10.2018,,,,,,,
+Saldo,100000,0,EUR,,,,,
+,,,,,,,,
+In der CSV-Datei finden Sie alle bereits gebuchten Umsätze. Die vorgemerkten Umsätze werden nicht aufgenommen, auch wenn sie in Ihrem Internetbanking angezeigt werden.,,,,,,,
+,,,,,,,,
+Buchung,Valuta,Auftraggeber/Empfänger,Buchungstext,Verwendungszweck,Saldo,Waehrung,Betrag,Waehrung
+2018-12-01,2018-12-01,Aldi,Lastschrift,Aldi,1000,EUR,-10,EUR
+2018-12-03,2018-12-02,Aldi,Lastschrift,Aldi,990,EUR,-5,EUR
+2018-12-03,2018-12-03,Netto,Lastschrift,Netto,940,EUR,-50,EUR
+2018-12-05,2018-12-05,Kindergeld,Gutschrift aus Dauerauftrag,Geld,1140,EUR,+100,EUR
+2018-12-07,2018-12-07,Aldi,Lastschrift,Aldi,1130,EUR,-10,EUR
+2018-12-08,2018-12-08,Aldi,Lastschrift,Aldi,1125,EUR,-5,EUR
+2018-12-09,2018-12-09,Netto,Lastschrift,Netto,1120,EUR,-5,EUR
+2018-12-13,2018-12-13,Aldi,Lastschrift,Aldi,1010,EUR,-10,EUR
+2018-12-14,2018-12-14,Aldi,Lastschrift,Aldi,1005,EUR,-5,EUR
+2018-12-15,2018-12-15,Netto,Lastschrift,Netto,1000,EUR,-5,EUR
+2018-12-16,2018-12-16,Vermieter,Dauerauftrag / Terminueberweisung,Miete,500,EUR,-500,EUR
+2018-12-19,2018-12-19,Aldi,Lastschrift,Aldi,490,EUR,-10,EUR
+2018-12-20,2018-12-20,Aldi,Lastschrift,Aldi,485,EUR,-5,EUR
+2018-12-21,2018-12-21,Netto,Lastschrift,Netto,480,EUR,-5,EUR
+2018-12-25,2018-12-25,Aldi,Lastschrift,Aldi,470,EUR,-10,EUR
+2018-12-26,2018-12-26,Aldi,Lastschrift,Aldi,465,EUR,-5,EUR
+2018-12-27,2018-12-27,Netto,Lastschrift,Netto,460,EUR,-5,EUR
+2018-12-28,2018-12-28,Gehalt,Gutschrift aus Dauerauftrag,Gehalt,640,EUR,+200,EUR
+2018-12-31,2018-12-31,Aldi,Lastschrift,Aldi,650,EUR,-10,EUR
+2019-01-10,2019-01-10,Aldi,Lastschrift,Aldi,640,EUR,-10,EUR
+2019-01-11,2019-01-11,Aldi,Lastschrift,Aldi,635,EUR,-5,EUR
+2019-01-12,2019-01-12,Netto,Lastschrift,Netto,630,EUR,-5,EUR
