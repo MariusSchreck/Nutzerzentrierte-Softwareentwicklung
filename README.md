@@ -5,10 +5,14 @@ Die Android App entstand im Praktikum des Moduls Nutzerzentrierte Softwareentwic
 **Aktueller Kontostand - Fixe Buchungen - einen seperat festgelegten Betrag, den das Konto nicht unterschreiten darf**.
 
 Fixe Buchungen könnnen beispielsweise Daueraufträge sein, welche im laufenden Monat noch anstehen. 
-Über den CSV Einlesen Butten, hat der User die Möglichkeit, seine von der Bank exportierte CSV in die App hochzuladen und so die Buchungen zu aktualisieren. 
+Über den 'CSV Einlesen' Button hat der User die Möglichkeit, seine von der Bank exportierte CSV in die App hochzuladen und so die Buchungen zu aktualisieren. 
 
 In Detailansichten hat der User die Möglichkeit, eine Liste seiner Abbuchungen einzusehen. Klickt ein Benutzer auf einen Listeneintrag, erhält er nähere Informationen zu dem entsprechenden Eintrag.
 
 In den Settings kann der Benutzer das jeweilige Konto, von dem der zur Verfügung stehende Betrag ermittelt werden soll festgelegt werden. Weiterhin kann er seine "eiserne Reservere" einzutragen. 
 
-Weitere Infos zum Projekt können aus der [Projektdokumenation](/Dokumentation.pdf) entnommen werden. 
+# Navigationsübersicht
+
+![Navigationsübersicht](doc/Navigationsuebersicht.png)
+
+Weitere Infos zum Projekt können aus der [Projektdokumenation](/doc/Dokumentation.pdf) entnommen werden. 
