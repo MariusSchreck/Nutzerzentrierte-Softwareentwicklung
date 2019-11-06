@@ -22,8 +22,11 @@ import java.nio.charset.Charset;
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,86 +85,31 @@ public class MainActivity extends AppCompatActivity {
         kontenDB.defaultSettings(saving, iban);
     }
     public void CalcVerfuegung(final String iban) throws ParseException {
-        String year="", monthString="", dateString_to="", dateString_from="",day="",totalDaysOfMonth="",saving="n.v";
-        Timestamp timestamp = new Timestamp(new Date().getTime());
-        String from = timestamp.toString().substring(0,10);
-        //Extract year, month and day from Timestamp
-        Integer from_year = Integer.parseInt(from.substring(0,4));
-        Integer month = Integer.parseInt(from.substring(5,7));
-        day = from.substring(8,10);
+        String  searchFrom="", searchTo="", saving ="n.v";
+        Calendar myCal = Calendar.getInstance();
+        myCal.setTime( myCal.getTime() );
+        int year = myCal.get( Calendar.YEAR  );
+        //automatisch einen monat zurück versetzt
+        int month = myCal.get( Calendar.MONTH);
+        myCal.set(Calendar.MONTH, month);
 
-        switch (month) {
-            case 1:
-                from_year --;
-                totalDaysOfMonth = "31";
-                monthString = "12";
-                year = from_year.toString();
-                break;
-            case 2:
-                totalDaysOfMonth ="31";
-                monthString = "01";
-                break;
-            case 3:
-                from_year --;
-                if(monthString.equals("02")) {
-                    if (Integer.parseInt(year) % 4 == 0 && (Integer.parseInt(year) % 100 != 0 || Integer.parseInt(year) % 400 == 0)) {
-                        totalDaysOfMonth = "29";
+        int day_from = myCal.get(Calendar.DATE);
+        int day_to = myCal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
-                    } else {
-                        totalDaysOfMonth = "28";
-                    }
-                }
-                monthString = "02";
-                year = from_year.toString();
-                break;
-            case 4:
-                totalDaysOfMonth = "31";
-                monthString = "03";
-                break;
-            case 5:
-                totalDaysOfMonth = "30";
-                monthString = "04";
-                break;
-            case 6:
-                totalDaysOfMonth = "31";
-                monthString = "05";
-                break;
-            case 7:
-                totalDaysOfMonth = "30";
-                monthString = "06";
-                break;
-            case 8:
-                totalDaysOfMonth = "31";
-                monthString = "07";
-                break;
-            case 9:
-                totalDaysOfMonth = "31";
-                monthString = "08";
-                break;
-            case 10:
-                totalDaysOfMonth = "30";
-                monthString = "09";
+        if(month == 0){
+            month = 12;
+            year--;
+        }
+        if(month == 2) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                day_to = 29;
 
-                break;
-            case 11:
-                totalDaysOfMonth = "31";
-                monthString = "10";
-                break;
-            case 12:
-                totalDaysOfMonth = "30";
-                monthString = "11";
-                break;
-            default:
-                monthString = "Invalid month";
-                break;
+            } else {
+                day_to = 28;
+            }
         }
-        dateString_from = year+"-"+monthString+"-"+day;
-        if(monthString == "12"){
-            dateString_to =  year+"-"+"01"+"-"+totalDaysOfMonth;
-        }
-        else {
-            dateString_to = year + "-" + monthString + "-" + totalDaysOfMonth;
-        }
+        searchFrom = String.valueOf(year) +"-"+ String.valueOf(month) +"-"+ String.valueOf(day_from);
+        searchTo = String.valueOf(year) +"-"+ String.valueOf(month) +"-"+ String.valueOf(day_to);
 
         Cursor bookings = kontenDB.getData(iban);
         while (bookings.moveToNext()) {
@@ -178,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         }
         final String aktKonto = listData_Saldo_last.get(0);
         final String dauerauftrag = "Dauerauftrag";
-        Cursor dauerauftraege = kontenDB.getDauerauftraege(iban,dateString_from,dateString_to,dauerauftrag);
+        Cursor dauerauftraege = kontenDB.getDauerauftraege(iban,searchFrom,searchTo,dauerauftrag);
         while (dauerauftraege.moveToNext()) {
             listData_Dauerauftraege.add(dauerauftraege.getString(8));
             listData_DauerauftraegeVerwendungszweck.add(dauerauftraege.getString(5));
@@ -208,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
         sum = haben - soll - Double.parseDouble(saving);
         final Double ergebnis = Double.parseDouble(aktKonto) + sum;
         final String finalSaving = saving;
-        final String finalDateString_from = dateString_from;
-        final String finalDateString_to = dateString_to;
+        final String finalSearchFrom = searchFrom;
+        final String finalSearchTo = searchTo;
 
         ImageButton infoButton = (ImageButton) findViewById(R.id.infoButton);
         infoButton.setOnClickListener(new View.OnClickListener() {
@@ -221,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 buffer.append("Aktueller Kontostand:" + "\t" + aktKonto + " €\n\n");
                 listData_Dauerauftraege.clear();
                 listData_DauerauftraegeVerwendungszweck.clear();
-                Cursor dauerauftraege = kontenDB.getDauerauftraege(iban, finalDateString_from, finalDateString_to,dauerauftrag);
+                Cursor dauerauftraege = kontenDB.getDauerauftraege(iban, finalSearchFrom, finalSearchTo,dauerauftrag);
 
                 while (dauerauftraege.moveToNext()) {
                     listData_Dauerauftraege.add(dauerauftraege.getString(8));
